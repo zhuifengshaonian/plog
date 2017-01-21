@@ -1,3 +1,2 @@
-line 1: test
-line 2: haha
-line 3: hello word
+2017-01-03 16:34:37,657 | INFO  | _timer_service_1 | timersrevise|call（） 243 | 495 - com.huawei.controller.dbworkflow- 1.0.1.SNAPSHOT | message info 1
+2017-01-03 16:34:37,657 | DEBUG | _timer_service_1 | timersrevise|call（） 243 | 495 - com.huawei.controller.dbworkflow- 1.0.1.SNAPSHOT | message info 2
