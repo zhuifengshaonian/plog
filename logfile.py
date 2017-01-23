@@ -1,4 +1,5 @@
 import zipfile
+
 class Logfile(object):
     def __init__(self, filename, mode='r'):
         self.filename = filename
@@ -8,10 +9,12 @@ class Logfile(object):
     def readFileLines(self):
         try:
             fileobject = open(self.filename, "r")
+            alllines = fileobject.readlines()
         except IOError:
             print("the file " + self.filename + "is not exist, Please double check.")
             exit()
-        alllines = fileobject.readlines()
+        finally:
+            fileobject.close()
         return alllines
 
     def readZipFileLines(self):
