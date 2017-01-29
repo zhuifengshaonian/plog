@@ -52,10 +52,11 @@ class Mysql(object):
     # 查找操作
     def query(self, sql):
         _conn, _cur = self.getconn()
-        _sta = _cur.execute(sql)
+        _cur.execute(sql)
+        _data = _cur.fetchall();
         _conn.commit()
         self.connClose(_conn, _cur)
-        return _sta
+        return _data
 
     # 关闭连接，释放资源
     @staticmethod
